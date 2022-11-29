@@ -7,6 +7,27 @@ import { PassengerComponent } from './passenger/passenger.component';
 import { ViewUsPublicComponent } from './view-us-public/view-us-public.component';
 import { ViewUserInfoComponent } from './view-user-info/view-user-info.component';
 import { ViewProductComponent } from './view-product/view-product.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const myRoutes:Routes = [
+  {
+    path:"",
+    component:PassengerComponent
+  },
+  {
+    path:"us",
+    component:ViewUsPublicComponent
+  },
+  {
+    path:"info",
+    component:ViewUserInfoComponent
+  },
+  {
+    path:"pro",
+    component:ViewProductComponent
+  },
+]
 
 @NgModule({
   declarations: [
@@ -14,11 +35,13 @@ import { ViewProductComponent } from './view-product/view-product.component';
     PassengerComponent,
     ViewUsPublicComponent,
     ViewUserInfoComponent,
-    ViewProductComponent
+    ViewProductComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
