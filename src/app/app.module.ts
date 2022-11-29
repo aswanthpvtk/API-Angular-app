@@ -10,6 +10,7 @@ import { ViewProductComponent } from './view-product/view-product.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TodoComponent } from './todo/todo.component';
+import { QuotesComponent } from './quotes/quotes.component';
 
 const myRoutes:Routes = [
   {
@@ -32,6 +33,10 @@ const myRoutes:Routes = [
     path:"todo",
     component:TodoComponent
   },
+  {
+    path:"quo",
+    component:QuotesComponent
+  },
 ]
 
 @NgModule({
@@ -42,7 +47,8 @@ const myRoutes:Routes = [
     ViewUserInfoComponent,
     ViewProductComponent,
     NavbarComponent,
-    TodoComponent
+    TodoComponent,
+    QuotesComponent
   ],
   imports: [
     BrowserModule,
