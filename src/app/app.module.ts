@@ -9,6 +9,7 @@ import { ViewUserInfoComponent } from './view-user-info/view-user-info.component
 import { ViewProductComponent } from './view-product/view-product.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule, Routes } from '@angular/router';
+import { TodoComponent } from './todo/todo.component';
 
 const myRoutes:Routes = [
   {
@@ -27,6 +28,10 @@ const myRoutes:Routes = [
     path:"pro",
     component:ViewProductComponent
   },
+  {
+    path:"todo",
+    component:TodoComponent
+  },
 ]
 
 @NgModule({
@@ -36,7 +41,8 @@ const myRoutes:Routes = [
     ViewUsPublicComponent,
     ViewUserInfoComponent,
     ViewProductComponent,
-    NavbarComponent
+    NavbarComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
