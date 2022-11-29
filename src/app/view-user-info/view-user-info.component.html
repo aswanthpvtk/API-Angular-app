@@ -1,0 +1,42 @@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <!-- <table class="table mt-4">
+                <thead>
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">email</th>
+                    <th scope="col">first_name</th>
+                    <th scope="col">last_name</th>
+                    <th scope="col">avatar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of data.data">
+                    <th>{{i.id}}</th>
+                    <td>{{i.email}}</td>
+                    <td>{{i.first_name}}</td>
+                    <td>{{i.last_name}}</td>
+                    <td>{{i.avatar}}</td>
+                  </tr>
+                </tbody>
+              </table> -->
+
+              <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor = "let i of data.data">
+                    <div class="card" style="width:18rem; height: 25rem;" >
+                        <img height="200px"src="{{i.avatar}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">{{i.id}} </h5>
+                          <h5 class="card-text">{{i.first_name}} {{i.last_name}}</h5>
+                          <p class="card-text">{{i.email}}</p>
+                          
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
